@@ -1,6 +1,6 @@
 # B9IS123_PROGRAMMING_FOR_INFORMATION_SYSTEMS
 
-In the CA2 project for Programming for Information Systems we are developing a web application by using flask framework, this web app is for selling musical instruments and has the following features:
+In the CA2 project for Programming for Information Systems we are developing a web application called JazzYard by using flask framework, this web app is for selling musical instruments and has the following features:
 1. User Resgistration
 2. User Login
 3. Home Page displaying musical products
