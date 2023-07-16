@@ -1,0 +1,38 @@
+.container {
+    z-index: 5;
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    position: sticky;
+    top: 1px;
+    text-align: center;
+    border-radius: 7px;
+    background-color: cadetblue;
+  }
+
+  .containerbody {
+    margin-top:7px!important;
+    z-index: 5;
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    background: white;
+    position: sticky;
+    top: 0px;
+    text-align: center;
+  }
+  
+  .searchbar-form .search-key-box {
+    position: relative;
+    width: auto;
+    overflow: hidden;
+    height: 40px;
+    border: 1px solid cadetblue;
+    border-radius: 6px 0 0 6px;
+  }
+
+  .search-button{
+    visibility: hidden;
+  }
+
+  
