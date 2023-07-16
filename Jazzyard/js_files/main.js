@@ -13,6 +13,35 @@ musicalitems =
     ]
 
 
+    $("#searchproducts").keyup(function (event) {
+        if ($("#searchproducts").val().trim() == "") {
+            $(".navLinks>li>a:contains('Home')").parent().click();
+            dynamichtml = "";
+            musicalitemslist = [];
+            musicalitemslist = JSON.parse(localStorage.getItem("json"));
+            GetItemsHtml(musicalitemslist);
+        }
+    
+        else {
+            musicalitemslist = [];
+            $.each(JSON.parse(localStorage.getItem("json")), function (i, j) {
+                if (j.name.toLowerCase().indexOf($("#searchproducts").val().toLowerCase()) != -1) {
+                    musicalitemslist.push(j);
+                }
+            });
+            GetItemsHtml(musicalitemslist);
+        }
+    
+        if($(".cards_item").length==1)
+        {
+            $('.cards_item').css("width","60%");
+        }
+    });
+
+    function GetItemsHtml(jsonarr) {
+        
+    }
+
     function GoToHome() {
         window.location.href = "/";
     }
