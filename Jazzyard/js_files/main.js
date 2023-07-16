@@ -2,15 +2,62 @@
 musicalitems =
     [
         {
-            "instrumentid": "",
-            "instrumentname": "",
-            "instrumentimage": "",
-            "instrumentprice": ""
+            "instrumentid": "1",
+            "instrumentname": "Digital Piano",
+            "instrumentimage": "../html_images/digital_piano.jpg",
+            "instrumentprice": "100€"
         },
-        {
 
+        {
+            "instrumentid": "2",
+            "instrumentname": "Drum Set",
+            "instrumentimage": "../html_images/drum_set.jpg",
+            "instrumentprice": "150€"
+        },
+
+        {
+            "instrumentid": "3",
+            "instrumentname": "Electric Drum",
+            "instrumentimage": "../html_images/electric_drum.jpg",
+            "instrumentprice": "260€"
+        },
+
+        {
+            "instrumentid": "4",
+            "instrumentname": "Acoustic Guitar",
+            "instrumentimage": "../html_images/Electro-Acoustic-Guitar.jpg",
+            "instrumentprice": "280€"
+        },
+
+        {
+            "instrumentid": "5",
+            "instrumentname": "Keyboard",
+            "instrumentimage": "../html_images/Keyboard.jpg",
+            "instrumentprice": "195€"
+        },
+
+        {
+            "instrumentid": "6",
+            "instrumentname": "Saxophone",
+            "instrumentimage": "../html_images/Saxophone.jpg",
+            "instrumentprice": "130€"
+        },
+
+        {
+            "instrumentid": "7",
+            "instrumentname": "Sound System",
+            "instrumentimage": "../html_images/Sound_System.jpg",
+            "instrumentprice": "120€"
+        },
+
+        {
+            "instrumentid": "8",
+            "instrumentname": "Vocal Processor",
+            "instrumentimage": "../html_images/Vocal_Processor.jpg",
+            "instrumentprice": "105€"
         }
-    ]
+
+    ];
 
 
     $("#searchproducts").keyup(function (event) {
@@ -39,7 +86,7 @@ musicalitems =
     });
 
     function GetItemsHtml(jsonarr) {
-        
+
     }
 
     function GoToHome() {
