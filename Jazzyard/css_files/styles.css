@@ -39,3 +39,55 @@
 {
    width:90px;
 }
+
+.nav>.nav-links {
+    font-size: 16px;
+    display: inline;
+    overflow: hidden;
+    bottom: 0;
+  }
+
+  .nav-link, .nav>.nav-links>ul li a {
+    color: black;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    padding: 0 8px;
+    text-decoration: none;
+  }
+
+  .nav>.nav-links>ul {
+    list-style: none;
+    position: relative;
+  }
+
+
+.nav>.nav-links>ul li:hover {
+    background-color: cadetblue; 
+    border-radius: 5px;
+  }
+
+  .nav>.nav-links>ul li.active {
+    background-color: cadetblue;
+    border-radius: 5px;
+  }
+
+  .nav>.nav-links>ul li {
+    display: inline-block;
+    margin: 10px;
+  }
+
+  .nav>.nav-btn {
+    display: none;
+  }
+
+  .nav>#nav-check {
+    display: none;
+  }
+
+  ul.navLinks li.icon {
+    display: none;
+  }
+  
+  
