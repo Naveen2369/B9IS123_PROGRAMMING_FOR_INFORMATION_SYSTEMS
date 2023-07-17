@@ -60,3 +60,7 @@ def signup():
             return redirect(url_for('views.home'))
 
     return render_template("registration.html", user=current_user)
+
+@auth.route('/productdetails', methods=['GET', 'POST'])
+def view_productdetails():
+    return render_template("productdetails.html", user=current_user)
