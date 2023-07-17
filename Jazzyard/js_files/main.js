@@ -185,4 +185,60 @@ else {
             FetchInstrumentHtml(musicalitemslist);
         }
 
+        $(".cartmsg").hide();
+        cartvalue=[];
+        cartval=[];
+        $("#cart").hide();
+        $(".modal").hide();
+        musicalitemslist = JSON.parse(localStorage.getItem("json"));
+        cartitemshtml = "";
+        cartitemexists=false;
+        if(localStorage.getItem("cartitems")) {
+            product_name = "";
+            product_price = "";
+            totalprice = 0;  
+            cartval =  JSON.parse(localStorage.getItem("cartitems"));
+            $("#cartcount").text(cartval.length);
+      
+            for(var i = 0; i < cartval.length; i++){
+              product_name = musicalitemslist.filter(function (data) {
+                return data.id == String(cartval[i].split("-")[0]);
+              })[0].name;
+      
+              product_price = musicalitemslist.filter(function (data) {
+                return data.id == String(cartval[i].split("-")[0]);
+              })[0].price;
+      
+              cartitemshtml += "<br/><div><span><img style='height:15px;width:15px' src='./html_images/bin.png'></img></span><a id='productlink' href='#'>" + product_name + " (" + cartval[i].split("-")[1] + ")</a> <span class='price'> € " + parseInt(product_price.split('€')[0].trim()) + "</span></div><br/>";
+              totalprice += parseInt(product_price.split('€')[0].trim());
+            }
+      
+            $("#cartitems").append(cartitemshtml);
+            $('.totalprice').html("<b>Total: € "+totalprice+"</b>");
+      
+            
+          }
+      
+          else {
+            $(".row").hide();
+            $(".cartmsg").show();
+          }
+      
     });
+
+    function MovetoCart() {
+        if(localStorage.getItem("cartitems")) {
+          cartvalue = localStorage.getItem("cartitems");
+          cartvalue.push(product_data[0].id + ":1"); 
+                
+        }
+    
+        else {
+          cartvalue=[];
+          cartvalue[0]=product_data[0].id + "-1";
+          
+        }
+    
+        localStorage.setItem("cartitems", JSON.stringify(cartvalue));
+        document.location.href = "./productdetails?checkout=true";
+      }
