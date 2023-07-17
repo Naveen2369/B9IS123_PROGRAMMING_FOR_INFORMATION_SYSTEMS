@@ -242,3 +242,7 @@ else {
         localStorage.setItem("cartitems", JSON.stringify(cartvalue));
         document.location.href = "./productdetails?checkout=true";
       }
+
+      $(window).on("load", function () {
+        $('li').removeClass('active');
+      });
