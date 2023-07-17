@@ -122,3 +122,32 @@
     -webkit-backdrop-filter: blur(5.4px);
     border: 1px solid rgba(80, 82, 81, 0.24);
   }
+
+  .cart {
+    height: 45px;
+    width: 45px;
+    background: url(./shopping-cart.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center left;
+    float: right;
+    cursor: pointer;
+  }
+
+  #cartcount {
+    color: cadetblue;
+    font-weight: 500;
+    height: 55px;
+    width: 55px;
+    float: right;
+    cursor: pointer;
+    padding: 30px 28px 12px 5px;
+    display: block;
+    left: auto;
+    right: 0px;
+    margin-top: -8px;
+    margin-right: -10px;
+    z-index: 100;
+  }
+
+  
