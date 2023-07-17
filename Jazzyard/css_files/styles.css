@@ -150,4 +150,9 @@
     z-index: 100;
   }
 
-  
+  #searchproducts{
+    border: 1px solid black;
+    width: 50%;
+    margin-left:25%;
+    margin-top:5px;
+  }
