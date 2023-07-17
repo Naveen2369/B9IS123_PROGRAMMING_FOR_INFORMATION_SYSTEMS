@@ -93,3 +93,15 @@
   .container, .container-lg, .container-md, .container-sm, .container-xl {
     max-width:100%!important;
    }
+
+   .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
