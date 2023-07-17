@@ -261,4 +261,6 @@ else {
       });
 
 
-      
+      function FetchInstrumentDetailsHtml(){
+        
+      }
