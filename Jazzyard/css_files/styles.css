@@ -156,3 +156,21 @@
     margin-left:25%;
     margin-top:5px;
   }
+
+  .btn{
+    font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif, SimSun!important;
+    background-color: cadetblue!important;
+    color:black!important;
+    font-weight: bold!important;
+    width: 150px!important;
+    display:inline-block !important;
+  }
+
+  .btncancel{
+    font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif, SimSun!important;
+    background-color: cadetblue!important;
+    color:black!important;
+    font-weight: bold!important;
+    width: 150px!important;
+    display:inline-block !important;
+  }
