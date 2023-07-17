@@ -1,0 +1,39 @@
+{% extends "template.html" %} {% block title %}Product{% endblock %} 
+
+{% block content %}
+
+<div>
+
+    <div id="productdetail" class="main">
+      <div class='breadcrum'> <span> <a class='breadcrumlinks' href='/'> Home </a> </span> <span id='product_name'> </span> </div>
+      <ul id="product-card" class="cards">
+      </ul>
+    </div>
+  
+</div>
+
+<div id="modal">
+    <div class="modal-content">
+      <div class="header">
+        <h2> </h2>
+        
+      </div>
+      <div class="copy">
+        <br/>
+        <span></span>
+        
+      </div>
+    </div>
+    <div class="overlay"></div>
+</div>
+
+<div id="cart">
+    <div class="main">
+        <div class='breadcrum'> <span> <a class='breadcrumlinks' href='/'> Home </a> </span>
+          <span>&nbsp;/&nbsp;Checkout</span> <span id='product_name'> </span> </div>
+        <ul id="product-card" class="cards">
+        </ul>
+      </div>
+      <br /><br />
+</div>
+{% endblock %}
