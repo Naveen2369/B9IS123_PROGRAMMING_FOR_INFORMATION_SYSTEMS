@@ -66,7 +66,7 @@ musicalitems =
             dynamichtml = "";
             musicalitemslist = [];
             musicalitemslist = JSON.parse(localStorage.getItem("json"));
-            GetItemsHtml(musicalitemslist);
+            FetchInstrumentHtml(musicalitemslist);
         }
     
         else {
@@ -76,7 +76,7 @@ musicalitems =
                     musicalitemslist.push(j);
                 }
             });
-            GetItemsHtml(musicalitemslist);
+            FetchInstrumentHtml(musicalitemslist);
         }
     
         if($(".cards_item").length==1)
@@ -85,9 +85,35 @@ musicalitems =
         }
     });
 
-    function GetItemsHtml(jsonarr) {
+localStorage.setItem("json", JSON.stringify(musicalitemslist));
+musicalitemslist = [];
+musicalitemslist = JSON.parse(localStorage.getItem("json"));
+FetchInstrumentHtml(musicalitemslist);
 
+category = "";
+category = getUrlbyParameter("cat");
+if (category != "") {
+    $(".navLinks>li>a:contains('" + category + "')").parent().click();
+}
+
+if($('.navLinks>li').hasClass('active'))
+{
+    if ($('.navLinks>li.active')[0].textContent.trim() != "Home") {
+        musicalitemslist = [];
+        musicalitemslist = JSON.parse(localStorage.getItem("json"));
+    
+        musicalitemslist = musicalitemslist.filter(function (i) {
+            return i.category == $('.navLinks>li.active')[0].textContent.trim();
+        });
+        FetchInstrumentHtml(musicalitemslist);
     }
+}
+
+else {
+    musicalitemslist = [];
+    musicalitemslist = JSON.parse(localStorage.getItem("json"));
+    FetchInstrumentHtml(musicalitemslist);
+}
 
     function GoToHome() {
         window.location.href = "/";
