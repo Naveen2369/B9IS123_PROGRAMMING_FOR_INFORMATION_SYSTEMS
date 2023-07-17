@@ -4,56 +4,56 @@ musicalitems =
         {
             "instrumentid": "1",
             "instrumentname": "Digital Piano",
-            "instrumentimage": "../html_images/digital_piano.jpg",
+            "instrumentimage": "../images/digital_piano.jpg",
             "instrumentprice": "100€"
         },
 
         {
             "instrumentid": "2",
             "instrumentname": "Drum Set",
-            "instrumentimage": "../html_images/drum_set.jpg",
+            "instrumentimage": "../images/drum_set.jpg",
             "instrumentprice": "150€"
         },
 
         {
             "instrumentid": "3",
             "instrumentname": "Electric Drum",
-            "instrumentimage": "../html_images/electric_drum.jpg",
+            "instrumentimage": "../images/electric_drum.jpg",
             "instrumentprice": "260€"
         },
 
         {
             "instrumentid": "4",
             "instrumentname": "Acoustic Guitar",
-            "instrumentimage": "../html_images/Electro-Acoustic-Guitar.jpg",
+            "instrumentimage": "../images/Electro-Acoustic-Guitar.jpg",
             "instrumentprice": "280€"
         },
 
         {
             "instrumentid": "5",
             "instrumentname": "Keyboard",
-            "instrumentimage": "../html_images/Keyboard.jpg",
+            "instrumentimage": "../images/Keyboard.jpg",
             "instrumentprice": "195€"
         },
 
         {
             "instrumentid": "6",
             "instrumentname": "Saxophone",
-            "instrumentimage": "../html_images/Saxophone.jpg",
+            "instrumentimage": "../images/Saxophone.jpg",
             "instrumentprice": "130€"
         },
 
         {
             "instrumentid": "7",
             "instrumentname": "Sound System",
-            "instrumentimage": "../html_images/Sound_System.jpg",
+            "instrumentimage": "../images/Sound_System.jpg",
             "instrumentprice": "120€"
         },
 
         {
             "instrumentid": "8",
             "instrumentname": "Vocal Processor",
-            "instrumentimage": "../html_images/Vocal_Processor.jpg",
+            "instrumentimage": "../images/Vocal_Processor.jpg",
             "instrumentprice": "105€"
         }
 
@@ -210,7 +210,7 @@ else {
                 return data.id == String(cartval[i].split("-")[0]);
               })[0].price;
       
-              cartitemshtml += "<br/><div><span><img style='height:15px;width:15px' src='./html_images/bin.png'></img></span><a id='productlink' href='#'>" + product_name + " (" + cartval[i].split("-")[1] + ")</a> <span class='price'> € " + parseInt(product_price.split('€')[0].trim()) + "</span></div><br/>";
+              cartitemshtml += "<br/><div><span><img style='height:15px;width:15px' src='./images/bin.png'></img></span><a id='productlink' href='#'>" + product_name + " (" + cartval[i].split("-")[1] + ")</a> <span class='price'> € " + parseInt(product_price.split('€')[0].trim()) + "</span></div><br/>";
               totalprice += parseInt(product_price.split('€')[0].trim());
             }            
             $("#cartitems").append(cartitemshtml);
