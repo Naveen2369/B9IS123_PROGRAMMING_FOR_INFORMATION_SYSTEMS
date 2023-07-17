@@ -154,6 +154,35 @@ else {
     
 
     $(document).ready(function(){
+        $('.navLinks>li').on('click', function () {
+            $('li').removeClass('active');
+            $(this).toggleClass('active');
+        });
         
+        category = "";
+        category = getUrlParameter("cat");
+    
+        if (category != "") {
+            $(".navLinks>li>a:contains('" + category + "')").parent().click();
+        }
+    
+        if($('.navLinks>li').hasClass('active'))
+        {
+            if ($('.navLinks>li.active')[0].textContent.trim() != "Home") {
+                musicalitemslist = [];
+                musicalitemslist = JSON.parse(localStorage.getItem("json"));
+        
+                musicalitemslist = musicalitemslist.filter(function (i) {
+                    return i.category == $('.navLinks>li.active')[0].textContent.trim();
+                });
+                FetchInstrumentHtml(musicalitemslist);
+            }
+        }
+    
+        else {
+            musicalitemslist = [];
+            musicalitemslist = JSON.parse(localStorage.getItem("json"));
+            FetchInstrumentHtml(musicalitemslist);
+        }
 
     });
