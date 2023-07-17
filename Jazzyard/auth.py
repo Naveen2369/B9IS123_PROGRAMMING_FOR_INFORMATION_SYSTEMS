@@ -26,11 +26,30 @@ def login():
     return render_template("login.html", user=current_user)
 
 @auth.route('/logout')
-
+@login_required
 def logout():
-    pass
+    logout_user()
+    return redirect(url_for('auth.login'))
 
 @auth.route('/signup', methods=['GET', 'POST'])
 
 def signup():
-    pass
+    if request.method == 'POST':
+        email = request.form.get('email')
+        first_name = request.form.get('firstName')
+        mainpassword = request.form.get('mainpassword')
+        confirmpassword = request.form.get('confirmpassword')
+        user = User.query.filter_by(email=email).first()
+        if user:
+            flash('Email address already exists.', category='error')
+        
+        else:
+            new_user = User(email=email, first_name=first_name, password=generate_password_hash(
+                mainpassword, method='sha256'))
+            db.session.add(new_user)
+            db.session.commit()
+            login_user(new_user, remember=True)
+            flash('Account created successfully!', category='success')
+            return redirect(url_for('views.home'))
+
+    return render_template("registration.html", user=current_user)
