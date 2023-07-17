@@ -232,6 +232,10 @@ else {
             $("#modal h2").text("Checkout")
             $(".copy span").text("products reserved successfully");
           }
+
+          else {
+            FetchInstrumentDetailsHtml()
+          }
       
     });
 
@@ -255,3 +259,6 @@ else {
       $(window).on("load", function () {
         $('li').removeClass('active');
       });
+
+
+      
