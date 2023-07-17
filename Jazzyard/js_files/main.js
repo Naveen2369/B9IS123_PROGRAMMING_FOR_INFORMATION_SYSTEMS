@@ -271,6 +271,8 @@ else {
         });
 
         imglist = " <img src='" + product_data[0].instrumentimage + "'></img>";
-
+        productimg = "<li > <div ></div>  <div class='product-colors'>" + imglist + "</div> </li>";
+        productimg += "<li class='product_card_desc'> <div style='display:flex;flex-direction:column;'><b><span>" + product_data[0].instrumentname + "</span></b><br/> </span> <br/> <b><span style='color:brown'>" + product_data[0].instrumentprice + "<br/><div style='float:left'> <div style='align-items:center'></div> <br/><button id='product_add_to_cart' onclick='MovetoCart()' class='btn card_btn btn-grad'>Move to Cart</button> </div> </span></b></div></li> ";
         
+
       }
