@@ -4,56 +4,56 @@ musicalitems =
         {
             "instrumentid": "1",
             "instrumentname": "Digital Piano",
-            "instrumentimage": "../images/digital_piano.jpg",
+            "instrumentimage": "../static/digital_piano.jpg",
             "instrumentprice": "100€"
         },
 
         {
             "instrumentid": "2",
             "instrumentname": "Drum Set",
-            "instrumentimage": "../images/drum_set.jpg",
+            "instrumentimage": "../static/drum_set.jpg",
             "instrumentprice": "150€"
         },
 
         {
             "instrumentid": "3",
             "instrumentname": "Electric Drum",
-            "instrumentimage": "../images/electric_drum.jpg",
+            "instrumentimage": "../static/electric_drum.jpg",
             "instrumentprice": "260€"
         },
 
         {
             "instrumentid": "4",
             "instrumentname": "Acoustic Guitar",
-            "instrumentimage": "../images/Electro-Acoustic-Guitar.jpg",
+            "instrumentimage": "../static/Electro-Acoustic-Guitar.jpg",
             "instrumentprice": "280€"
         },
 
         {
             "instrumentid": "5",
             "instrumentname": "Keyboard",
-            "instrumentimage": "../images/Keyboard.jpg",
+            "instrumentimage": "../static/Keyboard.jpg",
             "instrumentprice": "195€"
         },
 
         {
             "instrumentid": "6",
             "instrumentname": "Saxophone",
-            "instrumentimage": "../images/Saxophone.jpg",
+            "instrumentimage": "../static/Saxophone.jpg",
             "instrumentprice": "130€"
         },
 
         {
             "instrumentid": "7",
             "instrumentname": "Sound System",
-            "instrumentimage": "../images/Sound_System.jpg",
+            "instrumentimage": "../static/Sound_System.jpg",
             "instrumentprice": "120€"
         },
 
         {
             "instrumentid": "8",
             "instrumentname": "Vocal Processor",
-            "instrumentimage": "../images/Vocal_Processor.jpg",
+            "instrumentimage": "../static/Vocal_Processor.jpg",
             "instrumentprice": "105€"
         }
 
