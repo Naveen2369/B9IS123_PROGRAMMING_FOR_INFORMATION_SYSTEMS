@@ -193,6 +193,7 @@ else {
         musicalitemslist = JSON.parse(localStorage.getItem("json"));
         cartitemshtml = "";
         cartitemexists=false;
+        
         if(localStorage.getItem("cartitems")) {
             product_name = "";
             product_price = "";
@@ -211,17 +212,25 @@ else {
       
               cartitemshtml += "<br/><div><span><img style='height:15px;width:15px' src='./html_images/bin.png'></img></span><a id='productlink' href='#'>" + product_name + " (" + cartval[i].split("-")[1] + ")</a> <span class='price'> € " + parseInt(product_price.split('€')[0].trim()) + "</span></div><br/>";
               totalprice += parseInt(product_price.split('€')[0].trim());
-            }
-      
+            }            
             $("#cartitems").append(cartitemshtml);
             $('.totalprice').html("<b>Total: € "+totalprice+"</b>");
-      
+            
+
             
           }
       
           else {
             $(".row").hide();
             $(".cartmsg").show();
+          }
+
+          if(getUrlParameter("checkout") == "true") {
+            $("#cart").show();
+            $("#productdetail").hide();
+            $('li').removeClass('active');
+            $("#modal h2").text("Checkout")
+            $(".copy span").text("products reserved successfully");
           }
       
     });
