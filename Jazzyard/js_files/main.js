@@ -262,5 +262,15 @@ else {
 
 
       function FetchInstrumentDetailsHtml(){
+        $("#cart").hide();
+        $("#productdetail").show();
+        imglist="";
+        productimg = "";
+        product_data = musicalitemslist.filter(function (i) {
+            return i.id == String(getUrlParameter('id'));
+        });
+
+        imglist = " <img src='" + product_data[0].instrumentimage + "'></img>";
+
         
       }
