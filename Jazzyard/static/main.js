@@ -142,16 +142,11 @@ else {
         $("#musicinstrumentscatalog").html("");
         dynamichtml = "";
         $.each(jsonarray, function () {
-            ratinghtml = "";
-           
-    
+            ratinghtml = ""; 
             dynamichtml += "<li class='cards_item'><div class='card'><a href='/productdetails?id=" + this.instrumentid + "'><div class='card_image'><img src='" + this.instrumentimage + "'></div></a><div class='card_content'><h1 class='card_title'>" + this.instrumentname + "</h1> <div class='card_price'> <span> Price: " + this.instrumentprice + "</span></div><br/><button onclick='Navigateproductdetails(" + this.instrumentid + ")'' id='instrument_detail' class='btn card_btn btn-grad'>More</button> </div></div></li>";
-    
         });
         $("#musicinstrumentscatalog").append(dynamichtml);
     }
-
-    
 
     $(document).ready(function(){
         $('.navLinks>li').on('click', function () {
@@ -210,17 +205,14 @@ else {
                 return data.id == String(cartval[i].split("-")[0]);
               })[0].price;
       
-              cartitemshtml += "<br/><div><span><img style='height:15px;width:15px' src='./images/bin.png'></img></span><a id='productlink' href='#'>" + product_name + " (" + cartval[i].split("-")[1] + ")</a> <span class='price'> € " + parseInt(product_price.split('€')[0].trim()) + "</span></div><br/>";
+              cartitemshtml += "<br/><div><span><img style='height:15px;width:15px' src='./static/bin.png'></img></span><a id='productlink' href='#'>" + product_name + " (" + cartval[i].split("-")[1] + ")</a> <span class='price'> € " + parseInt(product_price.split('€')[0].trim()) + "</span></div><br/>";
               totalprice += parseInt(product_price.split('€')[0].trim());
             }            
             $("#cartitems").append(cartitemshtml);
             $('.totalprice').html("<b>Total: € "+totalprice+"</b>");
-            
-
-            
-          }
+        }
       
-          else {
+        else {
             $(".row").hide();
             $(".cartmsg").show();
           }
