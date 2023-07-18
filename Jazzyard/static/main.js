@@ -1,5 +1,5 @@
 /* Json to hold the list of musical instrument information */
-musicalitems =
+musicalitemslist =
     [
         {
             "instrumentid": "1",
