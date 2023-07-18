@@ -24,7 +24,7 @@
   .containerbody {
     margin-top:7px!important;
     z-index: 5;
-    height: auto;
+    height: 250px;
     width: auto;
     overflow: hidden;
     background: white;
@@ -53,6 +53,7 @@
 
 .nav{
   display:flex!important;
+  margin-left:45%!important;
 }
 
 .nav>.nav-links>ul li:hover {
@@ -272,9 +273,10 @@ ul.navLinks li.icon {
 
   #searchproducts{
     border: 1px solid cadetblue;
-    width: 500%;
-    margin-left:200%;
-    margin-top:5px;
+    width: 50%;
+    margin-left:27%;
+    margin-top:15px;
+    font-size: 25px;
   }
 
   .btn{
