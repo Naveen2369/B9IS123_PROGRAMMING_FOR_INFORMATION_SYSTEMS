@@ -85,7 +85,7 @@ musicalitemslist =
         }
     });
 
-musicalitemslist = [];
+
 localStorage.setItem("json", JSON.stringify(musicalitemslist));
 musicalitemslist = [];
 musicalitemslist = JSON.parse(localStorage.getItem("json"));
