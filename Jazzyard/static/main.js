@@ -85,6 +85,7 @@ musicalitems =
         }
     });
 
+musicalitemslist = [];
 localStorage.setItem("json", JSON.stringify(musicalitemslist));
 musicalitemslist = [];
 musicalitemslist = JSON.parse(localStorage.getItem("json"));
@@ -141,7 +142,7 @@ else {
     function FetchInstrumentHtml(jsonarr) {
         $("#musicinstrumentscatalog").html("");
         dynamichtml = "";
-        $.each(jsonarray, function () {
+        $.each(jsonarr, function () {
             ratinghtml = ""; 
             dynamichtml += "<li class='cards_item'><div class='card'><a href='/productdetails?id=" + this.instrumentid + "'><div class='card_image'><img src='" + this.instrumentimage + "'></div></a><div class='card_content'><h1 class='card_title'>" + this.instrumentname + "</h1> <div class='card_price'> <span> Price: " + this.instrumentprice + "</span></div><br/><button onclick='Navigateproductdetails(" + this.instrumentid + ")'' id='instrument_detail' class='btn card_btn btn-grad'>More</button> </div></div></li>";
         });
@@ -155,7 +156,7 @@ else {
         });
         
         category = "";
-        category = getUrlParameter("cat");
+        category = getUrlByParameter("cat");
     
         if (category != "") {
             $(".navLinks>li>a:contains('" + category + "')").parent().click();
@@ -217,7 +218,7 @@ else {
             $(".cartmsg").show();
           }
 
-          if(getUrlParameter("checkout") == "true") {
+          if(getUrlbyParameter("checkout") == "true") {
             $("#cart").show();
             $("#productdetail").hide();
             $('li').removeClass('active');
@@ -259,7 +260,7 @@ else {
         imglist="";
         productimg = "";
         product_data = musicalitemslist.filter(function (i) {
-            return i.id == String(getUrlParameter('id'));
+            return i.id == String(getUrlbyParameter('id'));
         });
 
         imglist = " <img src='" + product_data[0].instrumentimage + "'></img>";
