@@ -156,7 +156,7 @@ else {
         });
         
         category = "";
-        category = getUrlByParameter("cat");
+        category = getUrlbyParameter("cat");
     
         if (category != "") {
             $(".navLinks>li>a:contains('" + category + "')").parent().click();
