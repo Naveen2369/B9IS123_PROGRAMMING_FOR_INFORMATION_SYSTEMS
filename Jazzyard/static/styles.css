@@ -290,6 +290,7 @@ ul.navLinks li.icon {
     font-weight: bold!important;
     width: 150px!important;
     display:inline-block !important;
+    font-size:24px!important;
   }
 
   .btncancel{
@@ -312,6 +313,7 @@ ul.navLinks li.icon {
     font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif, SimSun;
     border: none;
     outline: none;
+    font-size:24px!important;
   }
 
   select {
@@ -322,6 +324,7 @@ ul.navLinks li.icon {
     line-height: 18px;
     font-size: 13px;
     font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif, SimSun;
+    font-size:25px!important;
   }
 
   
