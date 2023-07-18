@@ -20,7 +20,7 @@
 
     <div class="container">
         <div class="logo" onclick="GoToHome()"> </div>  
-         <h3 style="margin-top:50x;text-align: center;"> {% block header %} {% endblock %} </h3>         
+         <h3 style="margin-top:50x;text-align: center;font-size: 35px;font-weight: 600;"> {% block header %} {% endblock %} </h3>         
          <div class="nav" style="float:left">         
           {% if user.is_authenticated %}
           <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
