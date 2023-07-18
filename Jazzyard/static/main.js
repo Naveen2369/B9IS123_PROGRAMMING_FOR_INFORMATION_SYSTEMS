@@ -59,7 +59,6 @@ musicalitemslist =
 
     ];
 
-
     $("#searchproducts").keyup(function (event) {
         if ($("#searchproducts").val().trim() == "") {
             $(".navLinks>li>a:contains('Home')").parent().click();
@@ -84,7 +83,6 @@ musicalitemslist =
             $('.cards_item').css("width","60%");
         }
     });
-
 
 localStorage.setItem("json", JSON.stringify(musicalitemslist));
 musicalitemslist = [];
