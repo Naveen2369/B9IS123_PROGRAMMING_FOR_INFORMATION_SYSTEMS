@@ -1,6 +1,6 @@
 .container {
     z-index: 5;
-    height: auto;
+    height: 180px;
     width: auto;
     overflow: hidden;
     position: sticky;
@@ -13,7 +13,7 @@
 
   #musicinstrumentscatalog {
     background-color: white;
-    margin-left: 65px;
+    margin-left: 200px;
   }
 
   .main {
@@ -21,10 +21,14 @@
     margin: 0 auto;
   }
 
+  .card_price{
+    font-size:24px;
+  }
+
   .containerbody {
     margin-top:7px!important;
     z-index: 5;
-    height: 250px;
+    height: auto;
     width: auto;
     overflow: hidden;
     background: white;
@@ -53,7 +57,7 @@
 
 .nav{
   display:flex!important;
-  margin-left:45%!important;
+  margin-left:42%;
 }
 
 .nav>.nav-links>ul li:hover {
@@ -95,7 +99,7 @@ ul.navLinks li.icon {
   .nav-link, .nav>.nav-links>ul li a {
     color: black;
     line-height: 40px;
-    font-size: 34px;
+    font-size: 25px;
     font-weight: 600;
     display: block;
     padding: 0 8px;
