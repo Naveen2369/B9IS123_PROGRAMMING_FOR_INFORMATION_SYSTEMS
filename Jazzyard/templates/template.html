@@ -31,9 +31,16 @@
                 </ul>
             </div>
         </div>     
+
+        <br/>
+
+        <div class="search-key-box">
+            <input type="text" id="searchproducts" placeholder="search musical instruments" maxlength="75"
+                value="" name="SearchText" class="search-key" id="search-key">
+        </div>
+
   
-        <div class="hm-middle">
-            <form id="form-searchbar" class="searchbar-form">
+        <div class="hm-middle">  <form id="form-searchbar" class="searchbar-form">
                 <div class="searchbar-operate-box">
                     <input type="submit" class="searchbtn" value="">
                 </div>
@@ -54,14 +61,15 @@
             <a class="nav-item nav-link" id="signUp" href="/signup">Sign Up</a>
             {% endif %}
           
+           
+
         </div>
+
+
     </div>
   
   
-    <div class="search-key-box">
-      <input type="text" id="searchproducts" placeholder="search musical instruments" maxlength="75"
-          value="" name="SearchText" class="search-key" id="search-key">
-    </div>
+    
   
   
       <div class="containerbody">{% block content %} {% endblock %}</div>
