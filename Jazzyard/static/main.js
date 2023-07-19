@@ -197,12 +197,12 @@ else {
       
             for(var i = 0; i < cartval.length; i++){
               product_name = musicalitemslist.filter(function (data) {
-                return data.id == String(cartval[i].split("-")[0]);
-              })[0].name;
+                return data.instrumentid  == String(cartval[i].split("-")[0]);
+              })[0].instrumentname;
       
               product_price = musicalitemslist.filter(function (data) {
-                return data.id == String(cartval[i].split("-")[0]);
-              })[0].price;
+                return data.instrumentid  == String(cartval[i].split("-")[0]);
+              })[0].instrumentprice;
       
               cartitemshtml += "<br/><div><span><img style='height:15px;width:15px' src='./static/bin.png'></img></span><a id='productlink' href='#'>" + product_name + " (" + cartval[i].split("-")[1] + ")</a> <span class='price'> € " + parseInt(product_price.split('€')[0].trim()) + "</span></div><br/>";
               totalprice += parseInt(product_price.split('€')[0].trim());
@@ -233,13 +233,13 @@ else {
     function MovetoCart() {
         if(localStorage.getItem("cartitems")) {
           cartvalue = localStorage.getItem("cartitems");
-          cartvalue.push(product_data[0].id + ":1"); 
+          cartvalue.push(product_data[0].instrumentid + ":1"); 
                 
         }
     
         else {
           cartvalue=[];
-          cartvalue[0]=product_data[0].id + "-1";
+          cartvalue[0]=product_data[0].instrumentid + "-1";
           
         }
     
@@ -258,7 +258,7 @@ else {
         imglist="";
         productimg = "";
         product_data = musicalitemslist.filter(function (i) {
-            return i.id == String(getUrlbyParameter('id'));
+            return i.instrumentid == String(getUrlbyParameter('id'));
         });
 
         imglist = " <img src='" + product_data[0].instrumentimage + "'></img>";
