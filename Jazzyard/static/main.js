@@ -71,7 +71,7 @@ musicalitemslist =
         else {
             musicalitemslist = [];
             $.each(JSON.parse(localStorage.getItem("json")), function (i, j) {
-                if (j.name.toLowerCase().indexOf($("#searchproducts").val().toLowerCase()) != -1) {
+                if (j.instrumentname.toLowerCase().indexOf($("#searchproducts").val().toLowerCase()) != -1) {
                     musicalitemslist.push(j);
                 }
             });
