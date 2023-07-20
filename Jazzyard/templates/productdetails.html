@@ -1,56 +1,67 @@
-{% extends "template.html" %} {% block title %}Product{% endblock %} 
+{% extends "template.html" %} {% block title %}Product{% endblock %}
 
 {% block content %}
-
 <div>
-
-    <div id="productdetail" class="main">
-      <div class='breadcrum'> <span> <a class='breadcrumlinks' href='/'> Home </a> </span> <span id='product_name'> </span> </div>
-      <ul id="product-card" class="cards">
-      </ul>
-    </div>
-  
+  <div id="productdetail" class="main">
+    <ul id="product-card" class="cards">
+      {% for item in musicalitemslist %}
+      <li class="product-item">
+        <div class="product-image">
+          <img src="{{ item.instrumentimage }}" alt="{{ item.instrumentname }}">
+        </div>
+        <div class="product-info">
+          <h2>{{ item.instrumentname }}</h2>
+          <p class="price">{{ item.instrumentprice }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
 
 <div id="modal">
-    <div class="modal-content">
-      <div class="header">
-        <h2> </h2>
-        
-      </div>
-      <div class="copy">
-        <br/>
-        <span></span>
-        
-      </div>
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="header">
+      <h2> </h2>
     </div>
-    <div class="overlay"></div>
+    <div class="copy">
+      <br />
+      <span></span>
+    </div>
+  </div>
+  <div class="overlay"></div>
 </div>
 
 <div id="cart">
-    <div class="main">
-        <div class='breadcrum'> <span> <a class='breadcrumlinks' href='/'> Home </a> </span>
-          <span>&nbsp;/&nbsp;Checkout</span> <span id='product_name'> </span> </div>
-        <ul id="product-card" class="cards">
-        </ul>
-      </div>
-      <br /><br /> <div class="cartmsg">There are no items in the cart</div>
+  <div class="main">
+    <div class='breadcrum'>
+      <span>
+        <a class='breadcrumlinks' href='/'>Home</a>
+      </span>
+      <span>&nbsp;/&nbsp;Checkout</span>
+      <span id='product_name'></span>
+    </div>
+    <ul id="product-card" class="cards">
+    </ul>
+  </div>
+  <br /><br />
+  <div class="cartmsg">There are no items in the cart</div>
 
-      <div class="row">
-        <div class="col-45">
-          <div class="cartcontainer">
-            <h4><span style="float:left">Cart</span><br/>
-              <span class="price" style="color:black">
-                <i class="fa fa-shopping-cart"></i>
-              </span>
-            </h4>
-            <div id="cartitems"> </div>
-            <hr>
-            <p><span class="totalprice" style="color:black"><b></b></span></p>
-          </div>
-        </div>
-    
+  <div class="row">
+    <div class="col-45">
+      <div class="cartcontainer">
+        <h4><span style="float:left">Cart</span><br />
+          <span class="price" style="color:black">
+            <i class="fa fa-shopping-cart"></i>
+          </span>
+        </h4>
+        <div id="cartitems"></div>
+        <hr>
+        <p><span class="totalprice" style="color:black"><b></b></span></p>
       </div>
-    
+    </div>
+  </div>
+
 </div>
 {% endblock %}

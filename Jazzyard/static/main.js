@@ -1,63 +1,69 @@
 /* Json to hold the list of musical instrument information */
-musicalitemslist =
-    [
-        {
-            "instrumentid": "1",
-            "instrumentname": "Digital Piano",
-            "instrumentimage": "../static/digital_piano.jpg",
-            "instrumentprice": "100€"
-        },
+musicalitemslist = [
+    {
+        "instrumentid": "1",
+        "instrumentname": "Digital Piano",
+        "instrumentimage": "../static/digital_piano.jpg",
+        "instrumentprice": "100€",
+        "instrumentdesc": "A versatile digital piano suitable for beginners and professionals alike."
+    },
 
-        {
-            "instrumentid": "2",
-            "instrumentname": "Drum Set",
-            "instrumentimage": "../static/drum_set.jpg",
-            "instrumentprice": "150€"
-        },
+    {
+        "instrumentid": "2",
+        "instrumentname": "Drum Set",
+        "instrumentimage": "../static/drum_set.jpg",
+        "instrumentprice": "150€",
+        "instrumentdesc": "A complete drum set with high-quality cymbals and accessories."
+    },
 
-        {
-            "instrumentid": "3",
-            "instrumentname": "Electric Drum",
-            "instrumentimage": "../static/electric_drum.jpg",
-            "instrumentprice": "260€"
-        },
+    {
+        "instrumentid": "3",
+        "instrumentname": "Electric Drum",
+        "instrumentimage": "../static/electric_drum.jpg",
+        "instrumentprice": "260€",
+        "instrumentdesc": "An electric drum kit with customizable sound options."
+    },
 
-        {
-            "instrumentid": "4",
-            "instrumentname": "Acoustic Guitar",
-            "instrumentimage": "../static/Electro-Acoustic-Guitar.jpg",
-            "instrumentprice": "280€"
-        },
+    {
+        "instrumentid": "4",
+        "instrumentname": "Acoustic Guitar",
+        "instrumentimage": "../static/Electro-Acoustic-Guitar.jpg",
+        "instrumentprice": "280€",
+        "instrumentdesc": "A beautiful acoustic guitar with a built-in pickup for stage performances."
+    },
 
-        {
-            "instrumentid": "5",
-            "instrumentname": "Keyboard",
-            "instrumentimage": "../static/Keyboard.jpg",
-            "instrumentprice": "195€"
-        },
+    {
+        "instrumentid": "5",
+        "instrumentname": "Keyboard",
+        "instrumentimage": "../static/Keyboard.jpg",
+        "instrumentprice": "195€",
+        "instrumentdesc": "A versatile keyboard with multiple instrument sounds and features."
+    },
 
-        {
-            "instrumentid": "6",
-            "instrumentname": "Saxophone",
-            "instrumentimage": "../static/Saxophone.jpg",
-            "instrumentprice": "130€"
-        },
+    {
+        "instrumentid": "6",
+        "instrumentname": "Saxophone",
+        "instrumentimage": "../static/Saxophone.jpg",
+        "instrumentprice": "130€",
+        "instrumentdesc": "A classic saxophone with a rich and warm tone."
+    },
 
-        {
-            "instrumentid": "7",
-            "instrumentname": "Sound System",
-            "instrumentimage": "../static/Sound_System.jpg",
-            "instrumentprice": "120€"
-        },
+    {
+        "instrumentid": "7",
+        "instrumentname": "Sound System",
+        "instrumentimage": "../static/Sound_System.jpg",
+        "instrumentprice": "120€",
+        "instrumentdesc": "A compact and powerful sound system suitable for small events."
+    },
 
-        {
-            "instrumentid": "8",
-            "instrumentname": "Vocal Processor",
-            "instrumentimage": "../static/Vocal_Processor.jpg",
-            "instrumentprice": "105€"
-        }
-
-    ];
+    {
+        "instrumentid": "8",
+        "instrumentname": "Vocal Processor",
+        "instrumentimage": "../static/Vocal_Processor.jpg",
+        "instrumentprice": "105€",
+        "instrumentdesc": "A vocal processor with various effects for studio and live performances."
+    }
+];
 
     $("#searchproducts").keyup(function (event) {
         if ($("#searchproducts").val().trim() == "") {
@@ -249,6 +255,12 @@ else {
 
       $(window).on("load", function () {
         $('li').removeClass('active');
+
+        if (window.location.href.indexOf("productdetails") > -1) {
+            $(".breadcrum").hide();
+            $(".search-key-box").hide();
+            $(".copy").hide();
+        }
       });
 
 

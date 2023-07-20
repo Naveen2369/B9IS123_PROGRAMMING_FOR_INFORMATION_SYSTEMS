@@ -58,6 +58,8 @@
 .nav{
   display:flex!important;
   margin-left:42%;
+  float: right!important;
+  margin-top:1%!important;
 }
 
 .nav>.nav-links>ul li:hover {
@@ -193,7 +195,9 @@ ul.navLinks li.icon {
     display: flex;
     padding: 1rem;
     border-radius: 8px;
-    width: 55%;
+    margin-top: 15%;
+    margin-left:200px;
+    font-size: 24px;
   }
   .searchbtn{
     display: none;
@@ -288,7 +292,7 @@ ul.navLinks li.icon {
     background-color: cadetblue!important;
     color:black!important;
     font-weight: bold!important;
-    width: 150px!important;
+    width: auto!important;
     display:inline-block !important;
     font-size:24px!important;
   }
@@ -327,4 +331,22 @@ ul.navLinks li.icon {
     font-size:25px!important;
   }
 
-  
+  .product-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .product-image img {
+    max-width: 100px;
+  }
+
+  .product-info h2 {
+    margin-bottom: 10px;
+  }
+
+  .product-info p.price {
+    font-weight: bold;
+    color: green;
+  }
