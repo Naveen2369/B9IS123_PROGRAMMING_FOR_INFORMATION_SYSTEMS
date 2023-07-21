@@ -56,8 +56,7 @@
 }
 
 .nav{
-  display:flex!important;
-  /*margin-left:42%;*/
+  display:flex!important;  
   float: right!important;
   margin-top:1%!important;
 }
@@ -365,3 +364,275 @@ ul.navLinks li.icon {
     top: 0px;
     text-align: center;
   }
+
+  .breadcrum {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .breadcrumlinks {
+    text-decoration: none;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif, SimSun;
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  .breadcrum>span:nth-child(n+0):nth-last-child(n+2) {
+    float: left;
+  }
+
+  .breadcrum>span:last-child {
+    font-weight: 500;
+  }
+
+  span.price {
+    float: right;
+  }
+
+  span.totalprice {
+    float: right;
+  }
+
+  .cartmsg {
+    text-align: center;
+  }
+
+  .forminput {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+
+  label {
+    margin-bottom: 10px;
+    display: block;
+    float: left;
+    padding-left: 5px;
+    font-size: 16px;
+    font-weight:600;
+  }
+
+  #lblqty
+  {
+    margin-left:-5px;
+  }
+
+  .icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+  }
+
+  #productlink {
+    float: left;
+    text-decoration: none;
+  }
+
+  .row {
+    display: -ms-flexbox;
+  
+    display: flex;
+    -ms-flex-wrap: wrap;
+    
+    flex-wrap: wrap;
+    margin: 0 -16px;
+    width: 90%;
+  }
+
+  .col-25 {
+    -ms-flex: 25%;
+    
+    flex: 25%;
+  }
+
+  .col-50 {
+    -ms-flex: 50%;
+    
+    flex: 50%;
+  }
+
+  .col-75 {
+    -ms-flex: 75%;
+    
+    flex: 75%;
+  }
+
+  .col-45 {
+    -ms-flex: 45%;
+    
+    flex: 45%;
+  }
+
+  .col-55 {
+    -ms-flex: 55%;
+    
+    flex: 55%;
+  }
+
+  .col-25,
+  .col-50,
+  .col-75 {
+    padding: 0 16px;
+  }
+
+  input:hover{
+    border-color: cadetblue!important;
+  }
+
+  body {
+    color: #272727;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main {
+    position: relative;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  img {
+    height: 245px;
+    max-width: 100%;
+    vertical-align: middle;
+  }
+
+
+  .btn-grad {
+    background-color: cadetblue;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white!important;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+  }
+
+  .btn-grad:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .btn {
+    float:left;
+    color: black;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    width: 90%;
+    margin-left: 6px;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+   
+  }
+
+  .btn:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 8px;
+    float: left;
+    margin-left:35%;
+  }
+
+  .cards_item {
+    display: flex;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .product_card_desc {
+    display: flex;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 55%;
+  }
+
+  .product_card_images {
+    display: flex;
+    padding: 1rem;
+    /*background-color:white;*/
+    border-radius: 8px;
+  }
+
+  @media (min-width: 40rem) {
+    .cards_item {
+      width: 50%;
+    }
+  }
+
+  @media (min-width: 56rem) {
+    .cards_item {
+      width: 30.3333%;
+      margin: 5px;
+    }
+  }
+
+  .card {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 60px -5px rgb(0 0 0 / 25%);     
+    overflow: hidden;
+    width:75%;
+  }
+
+  .card_content {
+    backdrop-filter: blur(1px) saturate(158%);
+    -webkit-backdrop-filter: blur(1px) saturate(158%);
+  }
+
+  .card_title {
+    color: black;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 15px 5px 15px 5px;
+   
+  }
+
+  .card_text {
+    color: #ffffff;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .card_price {
+    color: black;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  .card_review {
+    color: black;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  
