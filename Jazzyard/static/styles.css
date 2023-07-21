@@ -57,7 +57,7 @@
 
 .nav{
   display:flex!important;
-  margin-left:42%;
+  /*margin-left:42%;*/
   float: right!important;
   margin-top:1%!important;
 }
@@ -349,4 +349,19 @@ ul.navLinks li.icon {
   .product-info p.price {
     font-weight: bold;
     color: green;
+  }
+
+  .nav-item> .nav-link{
+    float: right;
+  }
+
+  .cartcontainer{
+    padding: 5px 20px 15px 20px;
+    border-radius: 3px;
+    height: auto;
+    width: 50%;
+    overflow: hidden;
+    margin-left: 100px;
+    top: 0px;
+    text-align: center;
   }
