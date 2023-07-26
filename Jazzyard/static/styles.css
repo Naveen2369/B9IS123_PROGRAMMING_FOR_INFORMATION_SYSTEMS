@@ -57,8 +57,7 @@
 
 .nav{
   display:flex!important;  
-  float: right!important;
-  margin-top:1%!important;
+  margin-left: 42%!important;
 }
 
 .nav>.nav-links>ul li:hover {
@@ -194,8 +193,8 @@ ul.navLinks li.icon {
     display: flex;
     padding: 1rem;
     border-radius: 8px;
-    margin-top: 15%;
-    margin-left:200px;
+    /*margin-top: 15%;
+    margin-left:200px;*/
     font-size: 24px;
   }
   .searchbtn{
@@ -360,14 +359,17 @@ ul.navLinks li.icon {
     height: auto;
     width: 50%;
     overflow: hidden;
-    margin-left: 100px;
+    margin-left: 30%;
     top: 0px;
     text-align: center;
+    font-size: 20px;
+    font-weight: bold;
   }
 
   .breadcrum {
     margin-top: 10px;
     text-align: center;
+    font-size: 20px;
   }
 
   .breadcrumlinks {
@@ -375,7 +377,7 @@ ul.navLinks li.icon {
     margin-left: 20px;
     margin-top: 20px;
     font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif, SimSun;
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 500;
   }
 
@@ -505,7 +507,7 @@ ul.navLinks li.icon {
   }
 
   img {
-    height: 245px;
+    /*height: 245px;*/
     max-width: 100%;
     vertical-align: middle;
   }
@@ -554,7 +556,7 @@ ul.navLinks li.icon {
     padding: 0;
     border-radius: 8px;
     float: left;
-    margin-left:35%;
+    margin-left:15%;
   }
 
   .cards_item {
@@ -567,7 +569,8 @@ ul.navLinks li.icon {
     display: flex;
     padding: 1rem;
     border-radius: 8px;
-    width: 55%;
+    /*width: 55%;*/
+    margin-top:55px;
   }
 
   .product_card_images {

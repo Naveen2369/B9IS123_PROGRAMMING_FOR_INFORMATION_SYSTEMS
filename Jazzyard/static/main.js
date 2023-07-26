@@ -210,7 +210,7 @@ else {
                 return data.instrumentid  == String(cartval[i].split("-")[0]);
               })[0].instrumentprice;
       
-              cartitemshtml += "<br/><div><span><img style='height:15px;width:15px' src='./static/bin.png'></img></span><a id='productlink' href='#'>" + product_name + " (" + cartval[i].split("-")[1] + ")</a> <span class='price'> € " + parseInt(product_price.split('€')[0].trim()) + "</span></div><br/>";
+              cartitemshtml += "<br/><div><span></span><a id='productlink' href='#'>" + product_name + " (" + cartval[i].split("-")[1] + ")</a> <span class='price'> € " + parseInt(product_price.split('€')[0].trim()) + "</span></div><br/>";
               totalprice += parseInt(product_price.split('€')[0].trim());
             }            
             $("#cartitems").append(cartitemshtml);
@@ -238,8 +238,8 @@ else {
 
     function MovetoCart() {
         if(localStorage.getItem("cartitems")) {
-          cartvalue = localStorage.getItem("cartitems");
-          cartvalue.push(product_data[0].instrumentid + ":1"); 
+          cartvalue = JSON.parse(localStorage.getItem("cartitems")) || [];
+          cartvalue.push(product_data[0].instrumentid + "-1"); 
                 
         }
     
@@ -257,7 +257,7 @@ else {
         $('li').removeClass('active');
 
         if (window.location.href.indexOf("productdetails") > -1) {
-            $(".breadcrum").hide();
+           // $(".breadcrum").hide();
             $(".search-key-box").hide();
             $(".copy").hide();
         }
@@ -275,12 +275,13 @@ else {
 
         imglist = " <img src='" + product_data[0].instrumentimage + "'></img>";
         productimg = "<li > <div ></div>  <div class='product-colors'>" + imglist + "</div> </li>";
-        productimg += "<li class='product_card_desc'> <div style='display:flex;flex-direction:column;'><b><span>" + product_data[0].instrumentname + "</span></b><br/> </span> <br/> <b><span style='color:brown'>" + product_data[0].instrumentprice + "<br/><div style='float:left'> <div style='align-items:center'></div> <br/><button id='product_add_to_cart' onclick='MovetoCart()' class='btn card_btn btn-grad'>Move to Cart</button> </div> </span></b></div></li> ";
+        productimg += "<li class='product_card_desc'> <div style='display:flex;flex-direction:column;text-align: left'><b><span>" + product_data[0].instrumentname + "</span></b><br/> </span> <br/> <b><span>" +product_data[0].instrumentdesc+ "</span></b><br/> </span> <br/> <b><span style='color:brown'>" + product_data[0].instrumentprice + "<br/><div style='float:left'> <div style='align-items:center'></div> <br/><button id='product_add_to_cart' onclick='MovetoCart()' class='btn card_btn btn-grad'>Move to Cart</button> </div> </span></b></div></li> ";
         $("#product-card").append(productimg);
         $(".product-pic").css("background-image", "url('" + product_data[0].instrumentimage + "')");
         $(".product-pic").css("background-repeat", "no-repeat");
         $(".product-pic").css("background-position", "left center");
-
-        
-
       }
+
+      function Navigateproductdetails(itemid) {
+        window.location.href = "/productdetails?id=" + itemid;
+    }
